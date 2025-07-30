@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <title>Baia Beach Cup</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Glider.js per slider touch -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('img/smash_1.jpeg') no-repeat center center fixed;
+      background: url('1150010.JPG') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
       backdrop-filter: brightness(0.4);
@@ -28,9 +33,15 @@
 
     h1 {
       font-size: 3rem;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
       color: #ffe082;
       text-shadow: 2px 2px 5px #000;
+    }
+
+    .disclaimer {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 40px;
     }
 
     .item {
@@ -40,16 +51,6 @@
       margin: 30px 0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
       backdrop-filter: blur(6px);
-    }
-
-    .item img {
-      max-width: 250px;
-      width: 100%;
-      heigt: auto;
-      display: block;
-      margin: 0 auto 20 px;
-      border-radius: 12px;
-      margin-bottom: 20px;
     }
 
     .item h2 {
@@ -78,110 +79,85 @@
       background-color: #ffa000;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 150px) {
       h1 {
         font-size: 2rem;
       }
     }
-    .slider {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  margin: 0 auto 20px;
-  overflow: hidden;
-  border-radius: 12px;
-}
 
-.slides {
-  display: flex;
-  width: 200%;
-  transition: transform 0.5s ease;
-}
+    /* Glider (slider) custom */
+    .glider-contain {
+      margin-bottom: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.slide {
-  width: 50%;
-  flex-shrink: 0;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-
-.slider input {
-  display: none;
-}
-
-.navigation {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.navigation label {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background: #ffe082;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.navigation label:hover {
-  background: #ffd54f;
-}
-
-#pants1:checked ~ .slides {
-  transform: translateX(0%);
-}
-
-#pants2:checked ~ .slides {
-  transform: translateX(-50%);
-}
+    .glider img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
   </style>
 </head>
+
 <body>
   <div class="overlay">
     <div class="container">
       <h1>Baia Beach Cup Store</h1>
-    
-     <div class="item">
-  <div class="slider">
-    <input type="radio" name="slide-pants" id="pants1" checked>
-    <input type="radio" name="slide-pants" id="pants2">
+      <p class="disclaimer">Prodotti ufficiali del torneo. Disponibili fino a esaurimento scorte.</p>
 
-    <div class="slides">
-      <div class="slide">
-     <img src="img/pants_2.jpeg" alt="Pantaloncini Baia Beach Cup">
-      </div>
-      <div class="slide">
-        <img src="img/pants_1.jpeg" alt="Dettaglio pantaloncini">
-      </div>
-    </div>
-
-    <div class="navigation">
-      <label for="pants1"></label>
-      <label for="pants2"></label>
-    </div>
-  </div>
-      
+      <!-- Pantaloncini -->
+      <div class="item">
+        <div class="glider-contain">
+          <div class="glider" id="glider-pants">
+            <img src="img/pants_2.jpeg" alt="Pantaloncini Baia Beach Cup">
+            <img src="img/pants_1.jpeg" alt="Dettaglio pantaloncini">
+          </div>
+        </div>
         <h2>Pantaloncini Ufficiali</h2>
-        <p>Leggeri, resistenti e perfetti per la spiaggia. Disponibili in varie taglie. <strong>Fino a esaurimento scorte. </strong></p>
+        <p>Leggeri, resistenti e perfetti per la spiaggia. Disponibili in varie taglie. <strong>Fino a esaurimento scorte.</strong></p>
         <a href="https://wa.me/393466358755" class="btn">Info su WhatsApp</a>
       </div>
 
+      <!-- Cappellino -->
       <div class="item">
-        <img src="img/cap_1.jpeg" alt="Cappellino Baia Beach Cup">
-        <img src="img/cap_2.jpeg" alt= "Cappellino dietro">
+        <div class="glider-contain">
+          <div class="glider" id="glider-cap">
+            <img src="img/cap_1.jpeg" alt="Cappellino Baia Beach Cup">
+            <img src="img/cap_2.jpeg" alt="Dettaglio cappellino">
+          </div>
+        </div>
         <h2>Polo Cap Baia</h2>
-        <p>Iconico e minimale, con logo ricamato e regolabile. Disponibilità limitata.</p>
-        <a href="https://wa.me/393466358755" class="btn">Ordina su WhatsApp</a>
+        <p>Iconico e minimale, con logo ricamato e regolabile. <strong>Disponibilità limitata.</strong></p>
+        <a href="https://wa.me/393466358755" class="btn">Info su WhatsApp</a>
       </div>
-
     </div>
   </div>
+
+  <!-- Glider init -->
+  <script>
+    window.addEventListener('load', function(){
+      new Glider(document.querySelector('#glider-pants'), {
+        slidesToShow: 1,
+        dots: false,
+        arrows: false,
+        scrollLock: true,
+        draggable: true
+      });
+
+      new Glider(document.querySelector('#glider-cap'), {
+        slidesToShow: 1,
+        dots: false,
+        arrows: false,
+        scrollLock: true,
+        draggable: true
+      });
+    });
+  </script>
 </body>
 </html>
+
