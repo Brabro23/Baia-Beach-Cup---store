@@ -1,76 +1,106 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beach Volley Store</title>
+  <meta charset="UTF-8">
+  <title>Baia Beach Cup Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: sans-serif;
-      background: #f8f8f8;
       margin: 0;
-      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('1150010.JPG') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      backdrop-filter: brightness(0.4);
     }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 50px 20px;
+      min-height: 100vh;
+    }
+
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
-    }
-    h1 {
       text-align: center;
-      color: #e67e22;
     }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #ffe082;
+      text-shadow: 2px 2px 5px #000;
+    }
+
     .item {
-      background: #fff;
-      border-radius: 15px;
-      padding: 20px;
-      margin: 20px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      margin: 30px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      backdrop-filter: blur(6px);
     }
+
     .item img {
       max-width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
+
     .item h2 {
-      margin-top: 10px;
-      color: #333;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      color: #fff;
     }
+
     .item p {
-      color: #555;
+      color: #ddd;
     }
+
     .btn {
       display: inline-block;
-      padding: 10px 20px;
-      margin-top: 10px;
-      background-color: #e67e22;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
+      padding: 12px 25px;
+      margin-top: 15px;
+      background-color: #ffb300;
+      color: black;
       font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
     }
+
     .btn:hover {
-      background-color: #d35400;
+      background-color: #ffa000;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Beach Volley Store</h1>
+  <div class="overlay">
+    <div class="container">
+      <h1>Baia Beach Cup Store</h1>
 
-    <div class="item">
-      <img src="https://link-alla-tua-immagine.com/pantaloncino1.jpg" alt="Pantaloncino Beach Volley" />
-      <h2>Pantaloncino Classic</h2>
-      <p>Traspirante, comodo e perfetto per il gioco in spiaggia. Taglie disponibili: S, M, L.</p>
-      <a href="https://link-al-tuo-instagram-o-shop" class="btn">Acquista ora</a>
-    </div>
+      <div class="item">
+        <img src="MAT237.JPEG" alt="Pantaloncini Baia Beach Cup">
+        <h2>Pantaloncini Ufficiali</h2>
+        <p>Leggeri, resistenti e perfetti per la spiaggia. Disponibili in varie taglie.</p>
+        <a href="https://wa.me/393466358755" class="btn">Ordina su WhatsApp</a>
+      </div>
 
-    <div class="item">
-      <img src="https://link-alla-tua-immagine.com/pantaloncino2.jpg" alt="Pantaloncino Beach Volley" />
-      <h2>Edizione Limitata Summer</h2>
-      <p>Colori vivaci per la tua estate. Disponibile fino ad esaurimento scorte.</p>
-      <a href="https://link-al-tuo-instagram-o-shop" class="btn">Ordina su WhatsApp</a>
+      <div class="item">
+        <img src="1150007.JPG" alt="Cappellino Baia Beach Cup">
+        <h2>Cappellino Baia</h2>
+        <p>Iconico e minimale, con logo ricamato e regolabile. Disponibilità limitata.</p>
+        <a href="https://wa.me/393466358755" class="btn">Ordina su WhatsApp</a>
+      </div>
+
     </div>
   </div>
 </body>
 </html>
-aggiunto index.html
