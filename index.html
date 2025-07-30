@@ -83,6 +83,64 @@
         font-size: 2rem;
       }
     }
+    .slider {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slides {
+  display: flex;
+  width: 200%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.slider input {
+  display: none;
+}
+
+.navigation {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.navigation label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ffe082;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navigation label:hover {
+  background: #ffd54f;
+}
+
+#pants1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#pants2:checked ~ .slides {
+  transform: translateX(-50%);
+}
   </style>
 </head>
 <body>
@@ -91,8 +149,21 @@
       <h1>Baia Beach Cup Store</h1>
     
       <div class="item">
-        <img src="img/pants_2.jpeg" alt="Pantaloncini Baia Beach Cup">
-        <img src="img/pants_1.jpeg" alt= "Pantaloncini dietro">
+        <div class="slider">
+          <input type="radio" name="slide-pants" id=pants2" checked>
+          <input type="radio" name="slide-pants" id="pants2">
+
+           <div class="slides">
+      <div class="slide"><img src="img/pants_2.jpeg" alt="Pantaloncini Baia Beach Cup"></div>
+      <div class="slide"><img src="img/pants_1.jpeg" alt="Dettaglio pantaloncini"></div>
+    </div>
+
+    <div class="navigation">
+      <label for="pants1"></label>
+      <label for="pants2"></label>
+    </div>
+  </div>
+      
         <h2>Pantaloncini Ufficiali</h2>
         <p>Leggeri, resistenti e perfetti per la spiaggia. Disponibili in varie taglie.</p>
         <a href="https://wa.me/393466358755" class="btn">Ordina su WhatsApp</a>
