@@ -80,6 +80,39 @@
       }
     }
   </style>
+  body {
+  background-image: url('img/sfondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center; /* CENTRA TUTTO IL TESTO E I RIQUADRI */
+}
+
+.container {
+  display: flex;
+  justify-content: center;  /* centra i riquadri orizzontalmente */
+  flex-wrap: wrap;          /* permette di andare a capo se lo schermo è stretto */
+  gap: 20px;                /* spazio tra i riquadri */
+  margin-top: 30px;
+}
+
+.box {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  width: 220px;
+  text-align: center;
+}
+
+.box img {
+  width: 150px;   /* DIMENSIONE PIÙ PICCOLA */
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
 </head>
 <body>
   <div class="overlay">
