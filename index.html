@@ -13,7 +13,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-     background: url('img/smash_1.jpeg') no-repeat center center fixed;
+      background: url('img/smash_1.jpeg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
       backdrop-filter: brightness(0.4);
@@ -120,7 +120,7 @@
         </div>
         <h2>Pantaloncini Ufficiali</h2>
         <p>Leggeri, resistenti e perfetti per la spiaggia. Disponibili in varie taglie. <strong>Fino a esaurimento scorte.</strong></p>
-        <p><strong>18€</p>
+        <p><strong>18€</strong></p>
         <a href="https://wa.me/393466358755" class="btn">Info su WhatsApp</a>
       </div>
 
@@ -133,9 +133,24 @@
         </div>
         <h2>Polo Cap Baia</h2>
         <p>Iconico e minimale, con logo ricamato e regolabile. <strong>Disponibilità limitata.</strong></p>
-        <p><strong> 15€</strong></p>
+        <p><strong>15€</strong></p>
         <a href="https://wa.me/393466358755" class="btn">Info su WhatsApp</a>
       </div>
+
+      <!-- Canotta -->
+      <div class="item">
+        <div class="glider-contain">
+          <div class="glider" id="glider-tank">
+            <img src="img/1150519.jpeg" alt="Canotta ufficiale Baia Beach Cup fronte">
+            <img src="img/1150536.jpeg" alt="Canotta ufficiale Baia Beach Cup retro">
+          </div>
+        </div>
+        <h2>Canotta Ufficiale</h2>
+        <p>Comoda e traspirante, perfetta per giocare e per il tempo libero. Disponibile in varie taglie. <strong>Fino a esaurimento scorte.</strong></p>
+        <p><strong>20€</strong></p>
+        <a href="https://wa.me/393466358755" class="btn">Info su WhatsApp</a>
+      </div>
+
     </div>
   </div>
 
@@ -157,8 +172,15 @@
         scrollLock: true,
         draggable: true
       });
+
+      new Glider(document.querySelector('#glider-tank'), {
+        slidesToShow: 1,
+        dots: false,
+        arrows: false,
+        scrollLock: true,
+        draggable: true
+      });
     });
   </script>
 </body>
 </html>
-
